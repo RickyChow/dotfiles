@@ -4,6 +4,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set relativenumber
+set hlsearch
 inoremap { {<CR>}<Esc>ko<Tab>
 
 nnoremap <F2> :tabprevious<CR>
