@@ -5,6 +5,8 @@ set expandtab
 set autoindent
 set relativenumber
 set hlsearch
+set ignorecase
+set smartcase
 inoremap { {<CR>}<Esc>ko<Tab>
 
 nnoremap <F2> :tabprevious<CR>
