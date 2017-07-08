@@ -7,14 +7,14 @@ set relativenumber
 set hlsearch
 set ignorecase
 set smartcase
-inoremap { {<CR>}<Esc>ko<Tab>
 
-nnoremap <F2> :tabprevious<CR>
-nnoremap <F3>   :tabnext<CR>
-nnoremap <F1>     :tabnew<CR>:Ex<CR>
-inoremap <F2> <Esc>:tabprevious<CR>i
-inoremap <F3>   <Esc>:tabnext<CR>i
-inoremap <F1>     <Esc>:tabnew<CR>:Ex<CR>
-
-noremap <F4>     <C-w>w
-noremap <F5>     <C-w>v
+inoremap  {  {<CR>}<Esc>ko<Tab>
+nnoremap  <F2>  :tabprevious<CR>
+nnoremap  <F3>  :tabnext<CR>
+nnoremap  <F1>  :tabnew<CR>:Ex<CR>
+inoremap  <F2>  <Esc>:tabprevious<CR>i
+inoremap  <F3>  <Esc>:tabnext<CR>i
+inoremap  <F1>  <Esc>:tabnew<CR>:Ex<CR>
+noremap   <F4>  <C-w>w
+noremap   <F5>  <C-w>v
+vnoremap  <C-i> :!column -t<CR>
