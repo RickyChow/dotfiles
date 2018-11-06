@@ -9,6 +9,8 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 colorscheme darkblue
 
 nnoremap  <F2>  :tabprevious<CR>
@@ -20,6 +22,10 @@ inoremap  <F1>  <Esc>:tabnew<CR>:Ex<CR>
 noremap   <F4>  <C-w>w
 noremap   <F5>  <C-w>v
 vnoremap  <C-i> :!column -t<CR>
+
+noremap <F12> :set list!<CR>
+inoremap <F12> <C-o>:set list!<CR>
+cnoremap <F12> <C-c>:set list!<CR>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
