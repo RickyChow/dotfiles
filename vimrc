@@ -1,14 +1,16 @@
 syntax on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set relativenumber
+set number
 set hlsearch
 set ignorecase
 set smartcase
 
-inoremap  {  {<CR>}<Esc>ko<Tab>
+colorscheme darkblue
+
 nnoremap  <F2>  :tabprevious<CR>
 nnoremap  <F3>  :tabnext<CR>
 nnoremap  <F1>  :tabnew<CR>:Ex<CR>
@@ -18,3 +20,12 @@ inoremap  <F1>  <Esc>:tabnew<CR>:Ex<CR>
 noremap   <F4>  <C-w>w
 noremap   <F5>  <C-w>v
 vnoremap  <C-i> :!column -t<CR>
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-scripts/DoxygenToolkit.vim'
+call plug#end()
