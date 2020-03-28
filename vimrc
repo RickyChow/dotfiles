@@ -26,12 +26,3 @@ vnoremap  <C-i> :!column -t<CR>
 noremap <F12> :set list!<CR>
 inoremap <F12> <C-o>:set list!<CR>
 cnoremap <F12> <C-c>:set list!<CR>
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/DoxygenToolkit.vim'
-call plug#end()
